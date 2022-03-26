@@ -1,4 +1,4 @@
-package com.colorise;
+package com.ram_kumar.colorise;
 
 import android.os.Build;
 import android.os.Bundle;

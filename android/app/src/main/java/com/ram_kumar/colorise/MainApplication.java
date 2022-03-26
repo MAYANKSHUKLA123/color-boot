@@ -1,4 +1,4 @@
-package com.colorise;
+package com.ram_kumar.colorise;
 
 import android.app.Application;
 import android.content.Context;
@@ -79,7 +79,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.colorise.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.ram_kumar.colorise.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);

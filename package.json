@@ -21,7 +21,8 @@
     "react-native-webview": "^11.15.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "webpack-cli": "^4.9.1"
   },
   "private": true
 }

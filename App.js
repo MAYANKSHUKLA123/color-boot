@@ -8,13 +8,17 @@ import {
 import BeautyWebView from 'react-native-beauty-webview';
 
 const App = () => {
-  const [visible, setVisible] = useState(false);
+  // const [visible, setVisible] = useState(false);
   const [visible1, setVisible1] = useState(false);
-  const onButtonPress = () => {
-    setVisible(true);
-  };
+  const [visible2, setVisible2] = useState(false);
+  // const onButtonPress = () => {
+  //   setVisible(true);
+  // };
   const onButtonPress1 = () => {
-    setVisible(true);
+    setVisible1(true);
+  };
+  const onButtonPress2 = () => {
+    setVisible2(true);
   };
 
   return (
@@ -22,7 +26,7 @@ const App = () => {
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Image Colorization AI</Text>
         </View>
-        <BeautyWebView
+        {/* <BeautyWebView
           visible={visible} // Required for open and close 
           onPressClose={() => setVisible(false)} // Required for closing the modal
           url={'https://colourise.com/?source=ttai'}
@@ -31,8 +35,8 @@ const App = () => {
               title: 'Extra Item',
               onPress: () => console.log('Extra Menu Item Clicked'),
             },
-          ]}
-        />
+          ]} 
+         /> */}
         <BeautyWebView
           visible={visible1} // Required for open and close 
           onPressClose={() => setVisible1(false)} // Required for closing the modal
@@ -43,12 +47,29 @@ const App = () => {
               onPress: () => console.log('Extra Menu Item Clicked'),
             },
           ]}
+          
         />
-        <TouchableOpacity style={styles.button} onPress={onButtonPress}>
+
+<BeautyWebView
+          visible={visible2} // Required for open and close 
+          onPressClose={() => setVisible2(false)} // Required for closing the modal
+          url={'https://colab.research.google.com/drive/1_A1cLeTH_V1YaVC9V2FcPs81Nq8Upni6#scrollTo=ozF6W377Ctzk'}
+          extraMenuItems={[
+            {
+              title: 'Extra Item',
+              onPress: () => console.log('Extra Menu Item Clicked'),
+            },
+          ]}
+          
+        />
+        {/* <TouchableOpacity style={styles.button} onPress={onButtonPress}>
           <Text style={styles.text}>Open</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <TouchableOpacity style={styles.button1} onPress={onButtonPress1}>
           <Text style={styles.text}>Code</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button2} onPress={onButtonPress2}>
+          <Text style={styles.text}>Trained model</Text>
         </TouchableOpacity>
       </View>
   );
@@ -58,8 +79,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+    backgroundColor: 'black'
   },
-  button: {
+  // button: {
+  //   alignSelf: 'stretch',
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   padding: 8,
+  //   backgroundColor: '#2196f3',
+  //   marginHorizontal: 20,
+  // },
+  button1: {
+    marginTop: 10,
     alignSelf: 'stretch',
     justifyContent: 'center',
     alignItems: 'center',
@@ -67,7 +98,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#2196f3',
     marginHorizontal: 20,
   },
-  button1: {
+  button2: {
     marginTop: 10,
     alignSelf: 'stretch',
     justifyContent: 'center',
